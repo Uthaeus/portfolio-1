@@ -9,3 +9,8 @@
     background: gray;
     border: 1px solid black;
 }
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+}
