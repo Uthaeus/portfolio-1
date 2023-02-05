@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 import classes from './Login.module.css';
 
-const Login = () => {
+const Login = (props) => {
     const correctPassword = 'abc123';
 
     const passwordInputRef = useRef();
@@ -14,6 +14,7 @@ const Login = () => {
 
         if (enteredPassword === correctPassword) {
             // redirect to Home as logged in
+            props.isLogged(true);
         } else {
             // open modal indicating failed login
             e.target.value = '';

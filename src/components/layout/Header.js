@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import classes from './Header.module.css';
 
-const Header = () => {
+const Header = (props) => {
 
     return (
         <header className={classes.header}>
@@ -24,6 +24,9 @@ const Header = () => {
                     </li>
                     <li>
                         <Link to='/blogs'>Blogs</Link>
+                    </li>
+                    <li>
+                        {props.isLogged ? 'Sign Out' : <Link to='/login'>Login</Link>}
                     </li>
                 </ul>
             </nav>
