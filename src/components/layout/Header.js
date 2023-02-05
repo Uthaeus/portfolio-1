@@ -1,21 +1,30 @@
+import { Link } from 'react-router-dom';
 
-
-import Button from '../UI/Button';
 
 import classes from './Header.module.css';
 
-const Header = props => {
+const Header = () => {
 
     return (
-        <div className={classes.header}>
-            <p>Header/Nav</p>
-            <div className={classes['nav-links']}>
-                <Button val='Home' />
-                <Button val='About' />
-                <Button val='Blogs' />
-                <Button val='Contact Me' />
-            </div>
-        </div>
+        <header className={classes.header}>
+            <div>My Portfolio</div>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to='/'>Home</Link>
+                    </li>
+                    <li>
+                        <Link to='/about'>About</Link>
+                    </li>
+                    <li>
+                        <Link to='/contact-me'>Contact Me</Link>
+                    </li>
+                    <li>
+                        <Link to='/blogs'>Blogs</Link>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     );
 };
 
