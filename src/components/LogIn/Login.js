@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Card from "../UI/Card";
 
@@ -6,6 +7,8 @@ import classes from './Login.module.css';
 
 const Login = (props) => {
     const correctPassword = 'abc123';
+
+    const navigate = useNavigate();
 
     const passwordInputRef = useRef();
 
@@ -17,6 +20,7 @@ const Login = (props) => {
         if (enteredPassword === correctPassword) {
             // redirect to Home as logged in
             props.isLogged(true);
+            navigate('/');
         } else {
             // open modal indicating failed login
             e.target.value = '';
