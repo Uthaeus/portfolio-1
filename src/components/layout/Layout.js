@@ -1,7 +1,7 @@
 
 import Header from './Header';
 
-import classes from './Layout.modult.css';
+import classes from './Layout.module.css';
 
 const Layout = props => {
     return (
