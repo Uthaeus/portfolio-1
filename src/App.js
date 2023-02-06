@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -11,7 +11,21 @@ import Blogs from './components/Blogs/Blogs';
 import Login from './components/LogIn/Login';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    JSON.parse(localStorage.getItem('logged')) || false
+  );
+
+  const logIn = () => {
+    setIsLoggedIn(true);
+  };
+
+  useEffect(() => {
+    localStorage.setItem('logged', JSON.stringify(isLoggedIn));
+  }, [isLoggedIn]);
+
+  const logOut = () => {
+    setIsLoggedIn(false);
+  }
 
   return (
     <Layout isLogged={isLoggedIn}>
@@ -21,7 +35,7 @@ function App() {
         <Route path='/contact-me' element={<ContactMe />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/blogs' element={<Blogs />} />
-        <Route path='/login' element={<Login isLogged={setIsLoggedIn} />} />
+        <Route path='/login' element={<Login isLogged={logIn} />} />
       </Routes>
     </Layout>
   );

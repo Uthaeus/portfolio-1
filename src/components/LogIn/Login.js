@@ -19,7 +19,7 @@ const Login = (props) => {
 
         if (enteredPassword === correctPassword) {
             // redirect to Home as logged in
-            props.isLogged(true);
+            props.isLogged();
             navigate('/');
         } else {
             // open modal indicating failed login
