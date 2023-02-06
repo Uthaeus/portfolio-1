@@ -14,23 +14,25 @@ const ContactMe = () => {
 
     return (
         <div className={classes['contact-me']}>
-            <h1>Contact Me</h1>
-            <h3>or just give me some notes</h3>
             <div>
+                <h1>Contact Me</h1>
+                <h3>or just give me some notes</h3>
+            </div>
+            <div className={classes['contact-form']}>
                 <form onSubmit={submitHandler}>
-                    <div>
+                    <div className={classes.control}>
                         <label htmlFor='name'>Name</label>
                         <input type='text' id='name' ref={enteredName} />
                     </div>
-                    <div>
+                    <div className={classes.control}>
                         <label htmlFor='email'>Email</label>
                         <input type='email' id='email' ref={enteredEmail} />
                     </div>
-                    <div>
+                    <div className={classes.control}>
                         <label htmlFor='comments'>Comments/Feedback</label>
                         <textarea id='comments' cols='30' rows='6' ref={enteredComments}></textarea>
                     </div>
-                    <div>
+                    <div className={classes.actions}>
                         <button>Send</button>
                     </div>
                 </form>
