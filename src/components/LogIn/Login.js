@@ -32,9 +32,13 @@ const Login = (props) => {
             <h1>Login Page</h1>
             <Card>
                 <form onSubmit={submitHandler}>
-                    <label htmlFor="pass">Enter Password</label>
-                    <input type='password' id='pass' required ref={passwordInputRef} />
-                    <button type='submit'>Enter</button>
+                    <div className={classes.control}>
+                        <label htmlFor="pass">Enter Password</label>
+                        <input type='password' id='pass' required ref={passwordInputRef} />
+                    </div>
+                    <div className={classes.actions}>
+                        <button type='submit'>Enter</button>
+                    </div>
                 </form>
             </Card>
             <h5>Password is abc123</h5>
