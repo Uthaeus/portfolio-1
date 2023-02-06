@@ -1,8 +1,12 @@
 .about {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-evenly;
-    background: conic-gradient(at 60% 45%, rgb(17, 14, 14), rgb(50, 50, 34), rgb(17, 36, 17));
+    align-items: center;
     color: bisque;
+    height: 100%;
+}
+
+.title {
+    margin-top: 0 auto;
 }

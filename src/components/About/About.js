@@ -7,7 +7,12 @@ const About = () => {
 
     return (
         <div className={classes.about}>
-            <h1>About Page</h1>
+            <div className={classes.title}>
+                <h1>About Homer</h1>
+                <Card>
+                    <p>This is a little snippet telling a short, charming description about what i like and why</p>
+                </Card>
+            </div>
             <Card>
                 <h3>Homer J. Simpson</h3>
                 <p>(555)555-5555</p>
