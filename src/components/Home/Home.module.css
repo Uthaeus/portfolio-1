@@ -1,0 +1,8 @@
+.home {
+    background: conic-gradient(at 60% 45%, rgb(17, 14, 14), rgb(50, 50, 34), rgb(17, 36, 17));
+}
+
+.home h1 {
+    margin: auto;
+    color: bisque;
+}

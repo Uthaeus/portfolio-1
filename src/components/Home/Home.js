@@ -1,9 +1,12 @@
 
 
+import classes from './Home.module.css';
+
 const Home = () => {
     return (
-        <div>
-            <h1>Home Page</h1>
+        <div className={classes.home}>
+            <h1>Welcome to my Portfolio</h1>
+            
         </div>
     );
 };
