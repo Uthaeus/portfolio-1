@@ -32,9 +32,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/contact-me' element={<ContactMe />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/contact-me' element={<ContactMe isLogged={isLoggedIn} />} />
+        <Route path='/projects' element={<Projects isLogged={isLoggedIn} />} />
+        <Route path='/blogs' element={<Blogs isLogged={isLoggedIn} />} />
         <Route path='/login' element={<Login isLogged={logIn} />} />
       </Routes>
     </Layout>

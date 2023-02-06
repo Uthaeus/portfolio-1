@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import classes from './Header.module.css';
 
 const Header = (props) => {
-
     return (
         <header className={classes.header}>
             <div>My Portfolio</div>
@@ -26,7 +25,7 @@ const Header = (props) => {
                         <Link to='/blogs'>Blogs</Link>
                     </li>
                     <li>
-                        {props.isLogged ? <Link to='/'><span onClick={props.logOut}>Log Out</span></Link> : <Link to='/login'>Login</Link>}
+                        {props.isLogged ? <Link to='/'><span onClick={props.logOut}>Log Out</span></Link> : <Link to='/login'>Log In</Link>}
                     </li>
                 </ul>
             </nav>
