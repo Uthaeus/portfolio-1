@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <Layout isLogged={isLoggedIn}>
+    <Layout isLogged={isLoggedIn} logOut={logOut}>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />

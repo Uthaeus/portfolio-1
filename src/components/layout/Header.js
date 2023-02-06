@@ -26,7 +26,7 @@ const Header = (props) => {
                         <Link to='/blogs'>Blogs</Link>
                     </li>
                     <li>
-                        {props.isLogged ? 'Sign Out' : <Link to='/login'>Login</Link>}
+                        {props.isLogged ? <Link to='/'><span onClick={props.logOut}>Log Out</span></Link> : <Link to='/login'>Login</Link>}
                     </li>
                 </ul>
             </nav>

@@ -6,7 +6,7 @@ import classes from './Layout.module.css';
 const Layout = props => {
     return (
         <div>
-            <Header />
+            <Header logOut={props.logOut} />
             <main className={classes.main}>
                 {props.children}
             </main>
