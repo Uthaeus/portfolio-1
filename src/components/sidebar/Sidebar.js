@@ -8,13 +8,19 @@ const Sidebar = () => {
         <div className={classes.sidebar}>
             <ul>
                 <li>
-                    <Link to='/'>Git</Link>
+                    <Link to='/'>
+                        <i class="fa-brands fa-github"></i>
+                    </Link>
                 </li>
                 <li>
-                    <Link to='/'>Twit</Link>
+                    <Link to='/'>
+                        <i class="fa-brands fa-twitter"></i>
+                    </Link>
                 </li>
                 <li>
-                    <Link to='/'>Link</Link>
+                    <Link to='/'>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </Link>
                 </li>
             </ul>
         </div>
