@@ -8,10 +8,12 @@ const Layout = props => {
     return (
         <div>
             <Header logOut={props.logOut} isLogged={props.isLogged} />
-            <Sidebar />
+            
             <main className={classes.main}>
+                <Sidebar />
                 {props.children}
             </main>
+            
         </div>
     );
 };
