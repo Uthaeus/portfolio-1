@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 import classes from './Header.module.css';
@@ -10,22 +10,47 @@ const Header = (props) => {
             <nav>
                 <ul>
                     <li>
-                        <Link to='/'>Home</Link>
+                        <NavLink 
+                            to='/'
+                            className={({ isActive }) => 
+                                isActive ? classes.active : undefined
+                            }
+                        >Home</NavLink>
                     </li>
                     <li>
-                        <Link to='/about'>About</Link>
+                        <NavLink 
+                            to='/about'
+                            className={({ isActive }) => 
+                                isActive ? classes.active : undefined
+                            }
+                        >About</NavLink>
                     </li>
                     <li>
-                        <Link to='/contact-me'>Contact Me</Link>
+                        <NavLink 
+                            to='/contact-me'
+                            className={({ isActive }) => 
+                                isActive ? classes.active : undefined
+                            }
+                        >Contact Me</NavLink>
                     </li>
                     <li>
-                        <Link to='/projects'>Projects</Link>
+                        <NavLink 
+                            to='/projects'
+                            className={({ isActive }) => 
+                                isActive ? classes.active : undefined
+                            }
+                        >Projects</NavLink>
                     </li>
                     <li>
-                        <Link to='/blogs'>Blogs</Link>
+                        <NavLink 
+                            to='/blogs'
+                            className={({ isActive }) =>
+                                isActive ? classes.active : undefined
+                            }
+                        >Blogs</NavLink>
                     </li>
                     <li>
-                        {props.isLogged ? <Link to='/'><span onClick={props.logOut}>Log Out</span></Link> : <Link to='/login'>Log In</Link>}
+                        {props.isLogged ? <NavLink to='/'><span onClick={props.logOut}>Log Out</span></NavLink> : <NavLink to='/login' className={({ isActive }) => isActive ? classes.active : undefined}>Log In</NavLink>}
                     </li>
                 </ul>
             </nav>
